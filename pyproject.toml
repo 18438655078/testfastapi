@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "barley"
+version = "0.1.0"
+description = ""
+authors = ["lihaodong <18438655078>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.58.1"
+uvicorn = "^0.11.5"
+tortoise-orm = "^0.16.13"
+aiomysql = "^0.0.20"
+loguru = "^0.5.1"
+aerich = "^0.2.0"
+bcrypt = "^3.1.7"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.5.3"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

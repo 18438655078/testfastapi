@@ -1,0 +1,17 @@
+*.pyc
+*/__pycache__/
+*.egg-info/
+dist/
+
+.coverage
+.coverage.*
+.pytest_cache/
+log/
+
+instance/
+.idea/
+db/
+.DS_Store
+tests/tmp/
+
+*vscode
