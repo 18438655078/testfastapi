@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException
 from starlette.middleware.cors import CORSMiddleware
-from tortoise.contrib.fastapi import register_tortoise
+# from tortoise.contrib.fastapi import register_tortoise
 from app.router import bprouter
 from app.core.config import API_PREFIX
 from app.core.error import http422_error_handler, http_error_handler
@@ -22,10 +22,10 @@ def get_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    register_tortoise(app, TORTOISE_ORM, generate_schemas=True, add_exception_handlers=True)
+    # register_tortoise(app, TORTOISE_ORM, generate_schemas=True, add_exception_handlers=True)
 
-    app.add_exception_handler(HTTPException, http_error_handler)
-    app.add_exception_handler(RequestValidationError, http422_error_handler)    
+    # app.add_exception_handler(HTTPException, http_error_handler)
+    # app.add_exception_handler(RequestValidationError, http422_error_handler)    
     app.include_router(bprouter, prefix=API_PREFIX)
     return app
 
